@@ -83,7 +83,7 @@ func GenerateCustomAsset(funcLocName string, assetName string, siteID string) {
 	exPath := filepath.Dir(ex)
 
 	config := make(Config)
-	jsonFile, err := os.Open(path.Join(exPath, "../config.json"))
+	jsonFile, err := os.Open(path.Join(exPath, "./config.json"))
 	if err != nil {
 		log.Error(err)
 	}
