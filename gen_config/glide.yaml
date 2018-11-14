@@ -1,0 +1,9 @@
+package: github.com/risnejr/enlight-utils/gen_config
+import:
+- package: github.com/SKF/go-enlight-sdk
+  subpackages:
+  - grpc
+  - services/hierarchy
+- package: github.com/SKF/go-utility
+  subpackages:
+  - log

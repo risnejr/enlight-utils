@@ -12,8 +12,8 @@ import (
 
 	"github.com/SKF/go-enlight-sdk/grpc"
 	"github.com/SKF/go-enlight-sdk/services/hierarchy"
-	"github.com/SKF/go-enlight-sdk/services/hierarchy/grpcapi"
 	"github.com/SKF/go-utility/log"
+	grpcapi "github.com/SKF/proto/hierarchy"
 )
 
 // Config map[functional_location_name]map[asset_name]map[point_name]point_id
@@ -21,7 +21,7 @@ type Config map[string]map[string]map[string]string
 
 // DialHierarchy dials enlights grpc server and returns a client
 func DialHierarchy() hierarchy.HierarchyClient {
-	HOST := "grpc.sandbox.hierarchy.enlight.skf.com"
+	HOST := "grpc.hierarchy.enlight.skf.com"
 	PORT := "50051"
 
 	ex, err := os.Executable()
@@ -91,8 +91,8 @@ func GenerateCustomAsset(funcLocName string, assetName string, siteID string) {
 	data, _ := ioutil.ReadAll(jsonFile)
 	err = json.Unmarshal(data, &config)
 
-	// Hard coded ID from user risne94@gmail.com
-	userID := "0e586e18-a6c0-410f-b3fd-314c81d6aa5e"
+	// Hard coded ID from system user
+	userID := "7f8ba22a-7b4a-470a-a6e9-61906b2dddc5"
 
 	// Only create the functional location if it doesn't exist in config
 	var funcLocID string
@@ -182,7 +182,7 @@ func ToConfig(name string) string {
 func main() {
 	// Default UUID is SKF DEV CENTER GOT
 	var uuid string
-	flag.StringVar(&uuid, "uuid", "9d8a2eae-1ba0-4fcf-9efc-0eb75e6187db", "Site UUID from Enlight")
+	flag.StringVar(&uuid, "uuid", "fb98275e-330c-4b46-8dfa-785c3ddf2d8a", "Site UUID from Enlight")
 	flag.Parse()
 
 	hostname, err := os.Hostname()

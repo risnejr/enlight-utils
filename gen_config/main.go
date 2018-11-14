@@ -21,7 +21,7 @@ var replacer = strings.NewReplacer(" ", "_")
 
 // DialHierarchy dials enlights grpc server and returns a client
 func DialHierarchy() hierarchy.HierarchyClient {
-	HOST := "grpc.sandbox.hierarchy.enlight.skf.com"
+	HOST := "grpc.hierarchy.enlight.skf.com"
 	PORT := "50051"
 
 	ex, err := os.Executable()
@@ -80,6 +80,7 @@ func GenerateConfigFromParentID(config Config, funcLoc string, asset string, par
 	}
 
 	for _, childNode := range childNodes {
+		log.WithField("node", childNode).Info("found childnode")
 		if childNode.Type == "functional_location" {
 			funcLoc = replacer.Replace(strings.ToLower(childNode.Label))
 			config[funcLoc] = make(map[string]map[string]string)
@@ -103,7 +104,7 @@ func GenerateConfigFromParentID(config Config, funcLoc string, asset string, par
 func main() {
 	// Default UUID is SKF DEV CENTER GOT
 	var uuid string
-	flag.StringVar(&uuid, "uuid", "9d8a2eae-1ba0-4fcf-9efc-0eb75e6187db", "Site UUID from Enlight")
+	flag.StringVar(&uuid, "uuid", "fb98275e-330c-4b46-8dfa-785c3ddf2d8a", "Site UUID from Enlight")
 	flag.Parse()
 
 	client = DialHierarchy()

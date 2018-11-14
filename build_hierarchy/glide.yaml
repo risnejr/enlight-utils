@@ -1,0 +1,12 @@
+package: github.com/risnejr/enlight-utils/build_hierarchy
+import:
+- package: github.com/SKF/go-enlight-sdk
+  subpackages:
+  - grpc
+  - services/hierarchy
+- package: github.com/SKF/go-utility
+  subpackages:
+  - log
+- package: github.com/SKF/proto
+  subpackages:
+  - hierarchy

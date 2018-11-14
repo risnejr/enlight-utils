@@ -1,0 +1,111 @@
+hash: f91e04fbbba21a6c1eaa8fccaae3f0760a9a07ea8f04b93c78b455613988d716
+updated: 2018-11-14T17:31:01.268037+01:00
+imports:
+- name: github.com/davecgh/go-spew
+  version: d8f796af33cc11cb798c1aaeb27a4ebc5099927d
+  subpackages:
+  - spew
+- name: github.com/golang/protobuf
+  version: b4deda0973fb4c70b50d226b1af49f3da59f5265
+  subpackages:
+  - proto
+  - ptypes
+  - ptypes/any
+  - ptypes/duration
+  - ptypes/timestamp
+- name: github.com/johntdyer/slack-go
+  version: 95fac1160b220c5abcf8b0ef88e9c3cb213c09f4
+- name: github.com/johntdyer/slackrus
+  version: 3992f319fd0ac349483279ef74742cd787841cba
+- name: github.com/konsorten/go-windows-terminal-sequences
+  version: 5c8c8bd35d3832f5d134ae1e1e375b69a4d25242
+- name: github.com/oklog/ulid
+  version: 02a8604050d8466dd915307496174adb9be4593a
+- name: github.com/pmezard/go-difflib
+  version: 792786c7400a136282c1664665ae0a8db921c6c2
+  subpackages:
+  - difflib
+- name: github.com/sirupsen/logrus
+  version: bcd833dfe83d3cebad139e4a29ed79cb2318bf95
+- name: github.com/SKF/go-enlight-sdk
+  version: a209b8db6b2005a7b1245ce57fcd41d0332950bf
+  subpackages:
+  - grpc
+  - services/hierarchy
+- name: github.com/SKF/go-eventsource
+  version: 5a336f1f0af4c02ec8b308a7d7e62c8d4236355e
+  subpackages:
+  - eventsource
+- name: github.com/SKF/go-utility
+  version: d41190f74b367df1e87d23b9d79d06861421f459
+  subpackages:
+  - log
+- name: github.com/SKF/proto
+  version: 089d85c9f2c598e01736b7a15e3ef098deb9cd22
+  subpackages:
+  - common
+  - hierarchy
+- name: github.com/stretchr/objx
+  version: ef50b0de28773081167c97fc27cf29a0bf8b8c71
+- name: github.com/stretchr/testify
+  version: 04af85275a5c7ac09d16bb3b9b2e751ed45154e5
+  subpackages:
+  - assert
+  - mock
+- name: golang.org/x/crypto
+  version: e4dc69e5b2fd71dcaf8bd5d054eb936deb78d1fa
+  subpackages:
+  - ssh/terminal
+- name: golang.org/x/net
+  version: 03003ca0c849e57b6ea29a4bab8d3cb6e4d568fe
+  subpackages:
+  - context
+  - http/httpguts
+  - http2
+  - http2/hpack
+  - idna
+  - internal/timeseries
+  - trace
+- name: golang.org/x/sys
+  version: 66b7b1311ac80bbafcd2daeef9a5e6e2cd1e2399
+  subpackages:
+  - unix
+  - windows
+- name: golang.org/x/text
+  version: 6f44c5a2ea40ee3593d98cdcc905cc1fdaa660e2
+  subpackages:
+  - secure/bidirule
+  - transform
+  - unicode/bidi
+  - unicode/norm
+- name: google.golang.org/genproto
+  version: 5fc9ac5403620be16bcdb0c8e7644b1178472c3b
+  subpackages:
+  - googleapis/rpc/status
+- name: google.golang.org/grpc
+  version: 7a6a684ca69eb4cae85ad0a484f2e531598c047b
+  subpackages:
+  - balancer
+  - balancer/base
+  - balancer/roundrobin
+  - channelz
+  - codes
+  - connectivity
+  - credentials
+  - encoding
+  - encoding/proto
+  - grpclb/grpc_lb_v1/messages
+  - grpclog
+  - internal
+  - keepalive
+  - metadata
+  - naming
+  - peer
+  - resolver
+  - resolver/dns
+  - resolver/passthrough
+  - stats
+  - status
+  - tap
+  - transport
+testImports: []
